@@ -22,7 +22,7 @@ prioridade_bancos = [4, 3, 1, 2]
 gene_referencia_id = 1
 
 # FLAG PRA DETERMINAR OS PRINTS DO SCRIPT
-debug_lvl = 1
+debug_lvl = 0
 
 for coordenada in coordenadas:
 	id_coord = coordenada[0]
@@ -69,14 +69,21 @@ for coordenada in coordenadas:
 		gene_ref_tbl = "gene_referencia"
 		gene_alias_tbl = "gene_alias"
 		#insere novo gene referencia
-		qry_1 = "INSERT INTO "+ gene_ref_tbl +" (id_gene_ref, nome, id_banco) ("+str(gene_referencia_id)+", '"+gene_ref[0]+"', "+str(gene_ref[1])+");"
+		qry_1 = "INSERT INTO "+ gene_ref_tbl +" (nome, id_banco) VALUES ('"+gene_ref[0]+"', "+str(gene_ref[1])+");"
 		#seta o id do gene referencia na tabela de coordenadas
 		qry_2 = "UPDATE coordenada_gene SET id_gene_ref = "+str(gene_referencia_id)+" WHERE coordenada_gene.id_coordenada = "+str(id_coord)+";"
 		#cria entradas dos alias na tabela de alias dos genes
 		qry_3 = ""
 		for alias in gene_alias:
-			qry_3 = qry_3+"INSERT INTO "+ gene_alias_tbl +" (id_gene_ref, nome, id_banco) ("+str(gene_referencia_id)+", '"+alias[0]+"', "+str(alias[1])+");\n"
+			qry_3 = qry_3+"INSERT INTO "+ gene_alias_tbl +" (id_gene_ref, nome, id_banco) VALUES ("+str(gene_referencia_id)+", '"+alias[0]+"', "+str(alias[1])+");\n"
 		gene_referencia_id += 1
+		cursor.execute(qry_1)
+		#conn.commit()
+		cursor.execute(qry_2)
+		#conn.commit()
+		if (qry_3):
+			cursor.execute(qry_3)
+		conn.commit()
 		if (debug_lvl > 0):
 			print("QUERIES GERADAS PELO SCRIPT PARA COORDENADA "+str(id_coord))
 			print("##########################################################")
