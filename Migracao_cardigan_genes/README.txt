@@ -17,7 +17,7 @@ PROCEDIMENTO PARA MIGRAÇÃO DE DADOS DO BD CARDIGAN
 	- Basta executá-lo dentro do PostgreSQL no banco criado no item 1.
 	
 	
-2)	Migrando estrutura antiga dos genes e coordenadas para nova versão
+3)	Migrando estrutura antiga dos genes e coordenadas para nova versão
 ----------------------------------------------------------------------
 	- Usando python3 e a lib psycopg2 para conexão com o PostgreSQL, o script "mapeamento_generef_e_genealias.py" mapeia os dados da estrutura antiga para as novas tabelas criadas no item 2).
 	- No inicio do script, o nome do usuário e nome do banco devem ser substituídos corretamente para que seja feita a conexão.
