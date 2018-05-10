@@ -9,3 +9,4 @@ dumps_parciais_sandbox.zip
 dumps_parciais_sandbox/
 teste_postgresql_connection.py
 PATO_Cria_bd_e_popula_genes_e_coordenadas.sql
+Cria_bd_e_popula_genes_e_coordenadas_Ester.sql
