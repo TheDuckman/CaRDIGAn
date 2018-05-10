@@ -51,6 +51,7 @@ CREATE TABLE gene_alias
     id_gene_alias SERIAL PRIMARY KEY,
     id_gene_ref INTEGER,
     id_banco INTEGER,
+    nome VARCHAR(256),
     
     FOREIGN KEY (id_gene_ref) REFERENCES gene_referencia (id_gene_ref),
     FOREIGN KEY (id_banco) REFERENCES banco_de_anotacao (id_banco)
