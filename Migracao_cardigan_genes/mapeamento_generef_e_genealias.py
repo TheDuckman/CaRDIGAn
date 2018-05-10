@@ -75,7 +75,7 @@ for coordenada in coordenadas:
 		#cria entradas dos alias na tabela de alias dos genes
 		qry_3 = ""
 		for alias in gene_alias:
-			qry_3 = qry_3+"INSERT INTO "+ gene_alias_tbl +" (id_gene_ref, id_banco) ("+str(gene_referencia_id)+", "+str(alias[1])+");\n"
+			qry_3 = qry_3+"INSERT INTO "+ gene_alias_tbl +" (id_gene_ref, nome, id_banco) ("+str(gene_referencia_id)+", '"+alias[0]+"', "+str(alias[1])+");\n"
 		gene_referencia_id += 1
 		if (debug_lvl > 0):
 			print("QUERIES GERADAS PELO SCRIPT PARA COORDENADA "+str(id_coord))
