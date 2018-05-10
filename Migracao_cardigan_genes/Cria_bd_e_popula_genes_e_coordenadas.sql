@@ -12,3 +12,4 @@ CREATE DATABASE <NOME_DO_BD>;
 \copy gene from popula_gene_200_coords.tsv
 \copy coordenada_gene from popula_coordenada_gene_200_coords.tsv
 \copy gene_nomeia_coordenada from popula_gene_nomeia_coordenada_200_coords.tsv
+\copy mutacao_simples_avalia_gene_em_amostra from popula_mutacao_simples_avalia_gene_em_amostra_200_coords.tsv
