@@ -1,7 +1,7 @@
 import psycopg2
 
 try:
-	connect_str = "dbname='sandbox' user='pato' host='localhost' password='pato'"
+	connect_str = "dbname='cardigan' user='pato' host='localhost' password='pato'"
 	# use our connection values to establish a connection
 	conn = psycopg2.connect(connect_str)
 	# create a psycopg2 cursor that can execute queries
@@ -22,7 +22,7 @@ prioridade_bancos = [4, 3, 1, 2]
 gene_referencia_id = 1
 
 # FLAG PRA DETERMINAR OS PRINTS DO SCRIPT
-debug_lvl = 0
+debug_lvl = 1
 
 for coordenada in coordenadas:
 	id_coord = coordenada[0]
@@ -46,19 +46,19 @@ for coordenada in coordenadas:
 		if not nome:
 			# se o nome do gene estiver vazio, nao inclui
 			if (debug_lvl > 2):
-				print ("Excluindo o >{}<".format(nome))
+				print ("\t###EXCLUINDO!###")
 			continue
 		if not gene_ref:
 			# caso seja o primeiro nome de gene para a coordenada
 			gene_ref = [nome, id_banco]
 			if (debug_lvl > 2):
-				print ("\t\tGuardando a ref:\tnome: {}\tbanco: {}".format(nome, id_banco))
+				print ("\t\t++++Guardando a ref:\tnome: {}\tbanco: {}".format(nome, id_banco))
 		else:
 			# Demais coordenadas, selecionando gene de ref a partir da prioridade de anotação do banco
 			# Se o gene é "mais prioritário", substituir o antigo e joga o antigo para o alias
 			if prioridade_bancos.index(id_banco) < prioridade_bancos.index(gene_ref[1]):
 				if (debug_lvl > 2):
-					print ("\t\t\tTrocando a ref:\t{}\tpor\t{}".format(gene_ref[1], id_banco))
+					print ("\t\t\t----Trocando a ref:\t{}\tpor\t{}".format(gene_ref[1], id_banco))
 				gene_alias.append(gene_ref)
 				gene_ref = [nome, id_banco]
 			else:
@@ -77,19 +77,20 @@ for coordenada in coordenadas:
 		for alias in gene_alias:
 			qry_3 = qry_3+"INSERT INTO "+ gene_alias_tbl +" (id_gene_ref, nome, id_banco) VALUES ("+str(gene_referencia_id)+", '"+alias[0]+"', "+str(alias[1])+");\n"
 		gene_referencia_id += 1
-		cursor.execute(qry_1)
+		# cursor.execute(qry_1)
 		#conn.commit()
-		cursor.execute(qry_2)
+		# cursor.execute(qry_2)
 		#conn.commit()
-		if (qry_3):
-			cursor.execute(qry_3)
-		conn.commit()
-		if (debug_lvl > 0):
-			print("QUERIES GERADAS PELO SCRIPT PARA COORDENADA "+str(id_coord))
-			print("##########################################################")
-			print(qry_1)
-			print(qry_2)
-			print(qry_3)
-			print('\n');
+		# if (qry_3):
+			# cursor.execute(qry_3)
+		# conn.commit()
+	if (debug_lvl > 0):
+		print("QUERIES GERADAS PELO SCRIPT PARA COORDENADA "+str(id_coord))
+		print("##########################################################")
+		print(qry_1)
+		print(qry_2)
+		print(qry_3)
+		print('\n');
+		input("PRESS KEY...")
 	if (debug_lvl > 1):
 		print ("--------> Final ref:\t {}\n--------> Final alias:\t{}".format(gene_ref, gene_alias))
