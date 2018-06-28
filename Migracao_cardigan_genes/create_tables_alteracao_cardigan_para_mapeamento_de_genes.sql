@@ -1,7 +1,7 @@
 -- Arquivo para alterar a estrutura atual do CaRDIGAn para a nova modelagem de mapeamento
 -- de genes e coordenadas
 
-DROP TABLE banco_de_anotacao;
+DROP TABLE IF EXISTS banco_de_anotacao;
 
 CREATE TABLE banco_de_anotacao
 (
@@ -16,14 +16,14 @@ INSERT INTO banco_de_anotacao (
 )
 SELECT DISTINCT
     banco,
-    banco_alias    
+    banco_alias
 from gene;
 
 -----------------------------------------
 -- Inserir coluna id_banco na tabela gene para facilitar o mapeamento
 
 -- ALTER TABLE gene DROP COLUMN id_banco;
-ALTER TABLE gene 
+ALTER TABLE gene
     ADD COLUMN id_banco INTEGER,
     ADD FOREIGN KEY (id_banco) REFERENCES banco_de_anotacao (id_banco);
 
@@ -52,7 +52,7 @@ CREATE TABLE gene_alias
     id_gene_ref INTEGER,
     id_banco INTEGER,
     nome VARCHAR(256),
-    
+
     FOREIGN KEY (id_gene_ref) REFERENCES gene_referencia (id_gene_ref),
     FOREIGN KEY (id_banco) REFERENCES banco_de_anotacao (id_banco)
 );
@@ -60,7 +60,6 @@ CREATE TABLE gene_alias
 -------------------------------------------
 -- Acrescentando coluna de id_gene_ref em coordenada_gene (mapeamento)
 
-ALTER TABLE coordenada_gene 
+ALTER TABLE coordenada_gene
     ADD COLUMN id_gene_ref INTEGER,
     ADD FOREIGN KEY (id_gene_ref) REFERENCES gene_referencia (id_gene_ref);
-
