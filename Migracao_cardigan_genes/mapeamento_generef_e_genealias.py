@@ -17,10 +17,9 @@ coordenadas = cursor.fetchall()
 
 # Lista com ids dos bancos ordenados de acordo com critério de prioridade para seleção
 #do nome referência para os genes
-#	4			3			1		2
+#	1			3			4		2
 #[MIRBASE, GENE SYMBOL, ENSEMBL, HGNC]
-# prioridade_bancos = [4, 3, 1, 2]
-prioridade_bancos = [1, 3, 4, 2]
+prioridade_bancos = [4, 3, 1, 2]
 # Primeiro ID da tabela de genes de referencia
 gene_referencia_id = 1
 gene_alias_id = 1
@@ -40,7 +39,7 @@ for coordenada in coordenadas:
 	id_coord = coordenada[0]
 
 	#busca todos os 'join' entre cada coordenada e os vários nomes de gene
-	cursor.execute("""SELECT g.*, gnc.id_coordenada FROM gene g, gene_nomeia_coordenada gnc WHERE g.id_gene = gnc.id_gene AND gnc.id_coordenada = {}""".format(id_coord))
+	cursor.execute("""SELECT DISTINCT g.*, gnc.id_coordenada FROM gene g, gene_nomeia_coordenada gnc WHERE g.id_gene = gnc.id_gene AND gnc.id_coordenada = {}""".format(id_coord))
 	genes_coord = cursor.fetchall()
 	gene_ref = None
 	gene_alias = []
@@ -87,20 +86,25 @@ for coordenada in coordenadas:
 	gref_nome = gene_ref[0]
 	"""referencia da coord atual é alias de alguma outra coord (caso 5, 6)"""
 	if gref_nome in dict_alias:
-		# print("##Caso 5: gene ref '{}' é alias. Novo gene_ref:[{} {}] ".format(gref_nome, dict_alias[gref_nome][:1]))
-		print("\t##CASO 5, 6")
+		print("\t##CASO 5, 6 [coord {}]".format(id_coord))
 		ref_existente_nome = dict_alias[gref_nome][4]
 		ref_existente_bco_id = dict_referencia[ref_existente_nome][1]
 		gene_ref[0] = ref_existente_nome
 		gene_ref[1] = ref_existente_bco_id
+		# print("##Caso 5: gene ref '{}' é alias. Novo gene_ref:[{} {}] ".format(gref_nome, ref_existente_nome, ref_existente_bco_id))
 	elif gref_nome not in dict_referencia:
 		for ind, coord_alias in enumerate(gene_alias):
 			"""o ref nao existe ainda e um dos alias é referencia (caso 4)"""
 			if coord_alias[0] in dict_referencia:
-				print("\t##CASO 4")
+				print("\t##CASO 4 [coord {}]".format(id_coord))
 				grefold_id = dict_referencia[coord_alias[0]][2]
 				dict_referencia.pop(coord_alias[0])
+				dict_referencia[gref_nome] = [gref_nome, gref_idbanco, grefold_id]
+				for al in dict_alias: #[nome, bco_id, gene_alias_id, ref_id, ref_nome]
+					if dict_alias[al][4] == coord_alias[0]:
+						dict_alias[al][4] = gref_nome
 				list_queries.append("UPDATE {} SET nome = '{}', id_banco = {} WHERE id_gene_ref = {};".format(gene_ref_tbl, gref_nome, gref_idbanco, grefold_id))
+				# break
 				# print("\t####REF: {} || ALIAS: {}".format(gene_ref, gene_alias))
 				# print("\tO gene alias {} é referencia: {}".format(coord_alias[0], dict_referencia[coord_alias[0]]))
 				# print("\tA referencia escolhida é {}".format(gene_ref))
@@ -110,7 +114,7 @@ for coordenada in coordenadas:
 				"""o alias já existe, mas a referência ainda não (casos 7 e 8)"""
 				"""PRECISAMOS LEVAR EM CONTA CASOS ONDE EXISTEM IDS DE BANCO IGUAIS -> USAR NUM_MONTAGEM PRA DESEMPATE"""
 			elif coord_alias[0] in dict_alias:
-				print("\t##CASOS 7, 8")
+				print("\t##CASOS 7, 8 [coord {}]".format(id_coord))
 				# print("\tGREF: {} | ALIAS: {} ".format(gene_ref, coord_alias))
 				# print("\tINFO NO DICT: {}".format(dict_alias[coord_alias[0]]))
 				#nome da ref antiga
@@ -125,6 +129,9 @@ for coordenada in coordenadas:
 					#se o Gref ganhou, SALVA O GrefOld NOS ALIAS PRA SER INCLUIDO MAIS TARDE
 					gene_alias.append([grefold_nome, grefold_idbanco])
 					dict_referencia.pop(grefold_nome)
+					for al in dict_alias: #[nome, bco_id, gene_alias_id, ref_id, ref_nome]
+						if dict_alias[al][4] == grefold_nome:
+							dict_alias[al][4] = gref_nome
 					# ATUALIZA OS DADOS DO BANCO COM AS INFOS DO gene_ref
 					list_queries.append("UPDATE {} SET nome = '{}', id_banco = {} WHERE id_gene_ref = {};".format(gene_ref_tbl, gref_nome, gref_idbanco, grefold_id))
 					dict_referencia[gref_nome] = [gref_nome, gref_idbanco, grefold_id]
@@ -135,7 +142,7 @@ for coordenada in coordenadas:
 					gene_ref = [grefold_nome, grefold_idbanco]
 					dict_referencia[grefold_nome] = [grefold_nome, grefold_idbanco, grefold_id]
 					#se empatou [DIVIDIR OS CASOS DEPOIS]
-				break
+				# break
 
 
 	##########################################
@@ -174,9 +181,18 @@ for coordenada in coordenadas:
 		print('\n');
 	if (debug_lvl > 1):
 		print ("--------> Final ref:\t {}\n--------> Final alias:\t{}".format(gene_ref, gene_alias))
-for qry in list_queries:
+	if id_coord %1000 == 0:
+		print("[COORDENADA {}]".format(id_coord))
+	# print("[COORDENADA {}]".format(id_coord))
+com = 0
+print("\t\t##### RODANDO QUERIES #####")
+for ind, qry in enumerate(list_queries):
 	# print(qry)
 	cursor.execute(qry)
+	if ind%100 == 0:
+		com += 1
+		# print("[{}] Commit! (comentado)".format(com))
+		conn.commit()
 conn.commit()
 		# cursor.execute(qry_2)
 		#conn.commit()
