@@ -125,8 +125,8 @@ for coordenada in coordenadas:
 				# print("\tBANCO_ID REF: {} || BANCO_ID_OLD: {}".format(gref_idbanco, grefold_idbanco))
 
 				#index menor -> maior prioridade!!
-				if prioridade_bancos.index(gref_idbanco) <= prioridade_bancos.index(grefold_idbanco):
-					#se o Gref ganhou, SALVA O GrefOld NOS ALIAS PRA SER INCLUIDO MAIS TARDE
+				if prioridade_bancos.index(gref_idbanco) <= prioridade_bancos.index(grefold_idbanco) and grefold_nome != gref_nome:
+					#se o Gref ganhou(ou empate), SALVA O GrefOld NOS ALIAS PRA SER INCLUIDO MAIS TARDE
 					gene_alias.append([grefold_nome, grefold_idbanco])
 					dict_referencia.pop(grefold_nome)
 					for al in dict_alias: #[nome, bco_id, gene_alias_id, ref_id, ref_nome]
@@ -143,8 +143,6 @@ for coordenada in coordenadas:
 					dict_referencia[grefold_nome] = [grefold_nome, grefold_idbanco, grefold_id]
 					#se empatou [DIVIDIR OS CASOS DEPOIS]
 				# break
-
-
 	##########################################
 	### VERIFICA CONFLITOS E MONTA QUERIES ###
 	##########################################
@@ -187,15 +185,9 @@ for coordenada in coordenadas:
 com = 0
 print("\t\t##### RODANDO QUERIES #####")
 for ind, qry in enumerate(list_queries):
-	# print(qry)
 	cursor.execute(qry)
 	if ind%100 == 0:
 		com += 1
-		# print("[{}] Commit! (comentado)".format(com))
 		conn.commit()
 conn.commit()
-		# cursor.execute(qry_2)
-		#conn.commit()
-		# if (qry_3):
-		# cursor.execute(qry_3)
-		# conn.commit()
+print("\t\t##### FIM #####")
