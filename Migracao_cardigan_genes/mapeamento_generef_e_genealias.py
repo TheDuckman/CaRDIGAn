@@ -29,7 +29,7 @@ dict_referencia = {}
 dict_alias = {}
 
 # FLAG PRA DETERMINAR OS PRINTS DO SCRIPT
-debug_lvl = 2
+debug_lvl = 0
 
 ################################
 ### LIDA COM CADA COORDENADA ###
@@ -131,7 +131,7 @@ for coordenada in coordenadas:
 					gene_alias.append([grefold_nome, grefold_idbanco, grefold_gene_original_id])
 					dict_referencia.pop(grefold_nome)
 					for al in dict_alias: #[nome, bco_id, id_gene_original, gene_alias_id, ref_id, ref_nome, ref_id_gene_original]
-						if dict_alias[al][5] == nome_alias_atual:
+						if dict_alias[al][5] == grefold_nome:
 							dict_alias[al][5] = gref_nome
 							dict_alias[al][6] = gref_id_original
 					# ATUALIZA OS DADOS DO BANCO COM AS INFOS DO gene_ref
@@ -159,7 +159,7 @@ for coordenada in coordenadas:
 	else:
 		ref_id_da_coordenada = dict_referencia[gene_ref[0]][3]#[nome, bco_id, id_gene_original, gene_ref_id]
 		nome_ref = dict_referencia[gene_ref[0]][0]
-		ref_id_gene_original = dict_referencia[gene_ref[0]][0][2]
+		ref_id_gene_original = dict_referencia[gene_ref[0]][2]
 
 	list_queries.append("UPDATE coordenada_gene SET id_gene_ref = {} WHERE coordenada_gene.id_coordenada = {};".format(ref_id_da_coordenada, id_coord))
 
