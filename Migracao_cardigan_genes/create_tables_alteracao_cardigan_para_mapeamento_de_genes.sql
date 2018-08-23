@@ -65,3 +65,13 @@ CREATE TABLE gene_alias
 ALTER TABLE coordenada_gene
     ADD COLUMN id_gene_ref INTEGER,
     ADD FOREIGN KEY (id_gene_ref) REFERENCES gene_referencia (id_gene_ref);
+
+
+-------------------------------------------
+-- COLOCANDO COLUNAS PARA SANDBOX DE MIGRAÇÃO DE DADOS DE EXPERIMENTOS
+-- Sequenciamento
+ALTER TABLE sequenciamento_avalia_gene_em_amostra ADD COLUMN id_gene_ref INTEGER;
+
+-- Mutação
+ALTER TABLE mutacao_simples_avalia_gene_em_amostra ADD COLUMN id_gene_ref INTEGER;
+
