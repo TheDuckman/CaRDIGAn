@@ -15,14 +15,14 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner:
 --
 
 CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner:
 --
 
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
@@ -2325,8 +2325,7 @@ CREATE TABLE public.mutacao_simples_avalia_gene_em_amostra (
     biological_validation_platform text,
     consequence_type text,
     aa_mutation text,
-    cds_mutation text,
-    id_gene_ref integer
+    cds_mutation text
 );
 
 
@@ -2433,8 +2432,7 @@ CREATE TABLE public.sequenciamento_avalia_gene_em_amostra (
     lfcse double precision,
     stat double precision,
     is_isomir text,
-    log2foldchange double precision,
-    id_gene_ref integer
+    log2foldchange double precision
 );
 
 
@@ -3365,8 +3363,8 @@ ALTER TABLE ONLY public.mutacao_simples_avalia_gene_em_amostra
 -- Name: mutacao_simples_avalia_gene_em_amostra_id_gene_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
-ALTER TABLE ONLY public.mutacao_simples_avalia_gene_em_amostra
-    ADD CONSTRAINT mutacao_simples_avalia_gene_em_amostra_id_gene_fkey FOREIGN KEY (id_gene) REFERENCES public.gene(id_gene);
+-- ALTER TABLE ONLY public.mutacao_simples_avalia_gene_em_amostra
+--     ADD CONSTRAINT mutacao_simples_avalia_gene_em_amostra_id_gene_fkey FOREIGN KEY (id_gene) REFERENCES public.gene(id_gene);
 
 
 --
@@ -3405,8 +3403,8 @@ ALTER TABLE ONLY public.sequenciamento_avalia_gene_em_amostra
 -- Name: sequenciamento_avalia_gene_em_amostra_id_gene_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
-ALTER TABLE ONLY public.sequenciamento_avalia_gene_em_amostra
-    ADD CONSTRAINT sequenciamento_avalia_gene_em_amostra_id_gene_fkey FOREIGN KEY (id_gene) REFERENCES public.gene(id_gene);
+-- ALTER TABLE ONLY public.sequenciamento_avalia_gene_em_amostra
+--     ADD CONSTRAINT sequenciamento_avalia_gene_em_amostra_id_gene_fkey FOREIGN KEY (id_gene) REFERENCES public.gene(id_gene);
 
 
 --
@@ -3470,4 +3468,3 @@ GRANT ALL ON SCHEMA public TO PUBLIC;
 --
 -- PostgreSQL database dump complete
 --
-

@@ -3,14 +3,16 @@ CREATE DATABASE auxiliar;
 DROP DATABASE cdg;
 CREATE DATABASE cdg;
 \c cdg;
-DROP DATABASE auxiliar;
 
 \i Migracao_cardigan_genes/arquivos_de_dump_total/dump_SCHEMA_cardigan.sql
+
 \i Migracao_cardigan_genes/arquivos_de_dump_total/dump_DADOS_banco_de_anotacao.sql
 \i Migracao_cardigan_genes/arquivos_de_dump_total/dump_DADOS_gene_ref.sql
 \i Migracao_cardigan_genes/arquivos_de_dump_total/dump_DADOS_gene_alias.sql
 \i Migracao_cardigan_genes/arquivos_de_dump_total/dump_DADOS_coordenada_gene.sql
 
+\c auxiliar
+\c cdg;
 
 -- Populando as tabelas "CLINICAS"
 \copy paciente FROM Migracao_cardigan_genes/arquivos_de_dump_total/popula_paciente_total.tsv
@@ -29,3 +31,5 @@ DROP DATABASE auxiliar;
 
 -- SCRIPT PARA ALTERAÇÃO DE ESTRUTURA DAS TABELAS DE EXPERIMENTO - ADAPTAÇÃO AO NOVO SISTEMA DE GENE REFERENCIA
 \i Migracao_cardigan_genes/atualizacao_gene_id_tabelas_de_experimento.sql
+
+DROP DATABASE auxiliar;
