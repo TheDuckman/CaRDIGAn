@@ -29,7 +29,6 @@ COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
 
 
 --
--- Name: alcohol_history; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.alcohol_history AS ENUM (
@@ -40,10 +39,8 @@ CREATE TYPE public.alcohol_history AS ENUM (
 );
 
 
-ALTER TYPE public.alcohol_history OWNER TO pato;
 
 --
--- Name: annotation_type; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.annotation_type AS ENUM (
@@ -60,10 +57,8 @@ CREATE TYPE public.annotation_type AS ENUM (
 );
 
 
-ALTER TYPE public.annotation_type OWNER TO pato;
 
 --
--- Name: assembly_version; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.assembly_version AS ENUM (
@@ -72,10 +67,8 @@ CREATE TYPE public.assembly_version AS ENUM (
 );
 
 
-ALTER TYPE public.assembly_version OWNER TO pato;
 
 --
--- Name: biological_validation_status; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.biological_validation_status AS ENUM (
@@ -89,10 +82,8 @@ CREATE TYPE public.biological_validation_status AS ENUM (
 );
 
 
-ALTER TYPE public.biological_validation_status OWNER TO pato;
 
 --
--- Name: biomarker_positive; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.biomarker_positive AS ENUM (
@@ -103,10 +94,8 @@ CREATE TYPE public.biomarker_positive AS ENUM (
 );
 
 
-ALTER TYPE public.biomarker_positive OWNER TO pato;
 
 --
--- Name: cancer_history_first_degree_relative; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.cancer_history_first_degree_relative AS ENUM (
@@ -117,10 +106,8 @@ CREATE TYPE public.cancer_history_first_degree_relative AS ENUM (
 );
 
 
-ALTER TYPE public.cancer_history_first_degree_relative OWNER TO pato;
 
 --
--- Name: cellularity; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.cellularity AS ENUM (
@@ -133,10 +120,8 @@ CREATE TYPE public.cellularity AS ENUM (
 );
 
 
-ALTER TYPE public.cellularity OWNER TO pato;
 
 --
--- Name: chromosome; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.chromosome AS ENUM (
@@ -169,10 +154,8 @@ CREATE TYPE public.chromosome AS ENUM (
 );
 
 
-ALTER TYPE public.chromosome OWNER TO pato;
 
 --
--- Name: chromosome_strand; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.chromosome_strand AS ENUM (
@@ -182,10 +165,8 @@ CREATE TYPE public.chromosome_strand AS ENUM (
 );
 
 
-ALTER TYPE public.chromosome_strand OWNER TO pato;
 
 --
--- Name: consequence_type_value; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.consequence_type_value AS ENUM (
@@ -219,10 +200,8 @@ CREATE TYPE public.consequence_type_value AS ENUM (
 );
 
 
-ALTER TYPE public.consequence_type_value OWNER TO pato;
 
 --
--- Name: disease_followup_status; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.disease_followup_status AS ENUM (
@@ -236,10 +215,8 @@ CREATE TYPE public.disease_followup_status AS ENUM (
 );
 
 
-ALTER TYPE public.disease_followup_status OWNER TO pato;
 
 --
--- Name: donor_has_relative_with_cancer_history; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.donor_has_relative_with_cancer_history AS ENUM (
@@ -250,10 +227,8 @@ CREATE TYPE public.donor_has_relative_with_cancer_history AS ENUM (
 );
 
 
-ALTER TYPE public.donor_has_relative_with_cancer_history OWNER TO pato;
 
 --
--- Name: donor_relapse_type; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.donor_relapse_type AS ENUM (
@@ -265,10 +240,8 @@ CREATE TYPE public.donor_relapse_type AS ENUM (
 );
 
 
-ALTER TYPE public.donor_relapse_type OWNER TO pato;
 
 --
--- Name: donor_sex; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.donor_sex AS ENUM (
@@ -279,10 +252,8 @@ CREATE TYPE public.donor_sex AS ENUM (
 );
 
 
-ALTER TYPE public.donor_sex OWNER TO pato;
 
 --
--- Name: donor_vital_status; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.donor_vital_status AS ENUM (
@@ -292,10 +263,8 @@ CREATE TYPE public.donor_vital_status AS ENUM (
 );
 
 
-ALTER TYPE public.donor_vital_status OWNER TO pato;
 
 --
--- Name: experimento_de_expressao; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.experimento_de_expressao AS ENUM (
@@ -305,10 +274,8 @@ CREATE TYPE public.experimento_de_expressao AS ENUM (
 );
 
 
-ALTER TYPE public.experimento_de_expressao OWNER TO pato;
 
 --
--- Name: experimento_de_mutacao; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.experimento_de_mutacao AS ENUM (
@@ -318,10 +285,8 @@ CREATE TYPE public.experimento_de_mutacao AS ENUM (
 );
 
 
-ALTER TYPE public.experimento_de_mutacao OWNER TO pato;
 
 --
--- Name: fita; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.fita AS ENUM (
@@ -330,10 +295,8 @@ CREATE TYPE public.fita AS ENUM (
 );
 
 
-ALTER TYPE public.fita OWNER TO pato;
 
 --
--- Name: gene_db; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.gene_db AS ENUM (
@@ -344,10 +307,8 @@ CREATE TYPE public.gene_db AS ENUM (
 );
 
 
-ALTER TYPE public.gene_db OWNER TO pato;
 
 --
--- Name: icgc_zygosity; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.icgc_zygosity AS ENUM (
@@ -359,10 +320,8 @@ CREATE TYPE public.icgc_zygosity AS ENUM (
 );
 
 
-ALTER TYPE public.icgc_zygosity OWNER TO pato;
 
 --
--- Name: is_annotated; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.is_annotated AS ENUM (
@@ -372,10 +331,8 @@ CREATE TYPE public.is_annotated AS ENUM (
 );
 
 
-ALTER TYPE public.is_annotated OWNER TO pato;
 
 --
--- Name: is_isomir; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.is_isomir AS ENUM (
@@ -386,10 +343,8 @@ CREATE TYPE public.is_isomir AS ENUM (
 );
 
 
-ALTER TYPE public.is_isomir OWNER TO pato;
 
 --
--- Name: junction_type; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.junction_type AS ENUM (
@@ -400,10 +355,8 @@ CREATE TYPE public.junction_type AS ENUM (
 );
 
 
-ALTER TYPE public.junction_type OWNER TO pato;
 
 --
--- Name: mirna_db; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.mirna_db AS ENUM (
@@ -412,10 +365,8 @@ CREATE TYPE public.mirna_db AS ENUM (
 );
 
 
-ALTER TYPE public.mirna_db OWNER TO pato;
 
 --
--- Name: mutation_type; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.mutation_type AS ENUM (
@@ -430,10 +381,8 @@ CREATE TYPE public.mutation_type AS ENUM (
 );
 
 
-ALTER TYPE public.mutation_type OWNER TO pato;
 
 --
--- Name: mutation_type_simple; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.mutation_type_simple AS ENUM (
@@ -445,10 +394,8 @@ CREATE TYPE public.mutation_type_simple AS ENUM (
 );
 
 
-ALTER TYPE public.mutation_type_simple OWNER TO pato;
 
 --
--- Name: platform; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.platform AS ENUM (
@@ -541,10 +488,8 @@ CREATE TYPE public.platform AS ENUM (
 );
 
 
-ALTER TYPE public.platform OWNER TO pato;
 
 --
--- Name: prior_malignancy; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.prior_malignancy AS ENUM (
@@ -555,10 +500,8 @@ CREATE TYPE public.prior_malignancy AS ENUM (
 );
 
 
-ALTER TYPE public.prior_malignancy OWNER TO pato;
 
 --
--- Name: procedure_type; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.procedure_type AS ENUM (
@@ -574,10 +517,8 @@ CREATE TYPE public.procedure_type AS ENUM (
 );
 
 
-ALTER TYPE public.procedure_type OWNER TO pato;
 
 --
--- Name: raw_data_repository; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.raw_data_repository AS ENUM (
@@ -592,10 +533,8 @@ CREATE TYPE public.raw_data_repository AS ENUM (
 );
 
 
-ALTER TYPE public.raw_data_repository OWNER TO pato;
 
 --
--- Name: reference_sample_type; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.reference_sample_type AS ENUM (
@@ -608,10 +547,8 @@ CREATE TYPE public.reference_sample_type AS ENUM (
 );
 
 
-ALTER TYPE public.reference_sample_type OWNER TO pato;
 
 --
--- Name: relationship_sex; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.relationship_sex AS ENUM (
@@ -622,10 +559,8 @@ CREATE TYPE public.relationship_sex AS ENUM (
 );
 
 
-ALTER TYPE public.relationship_sex OWNER TO pato;
 
 --
--- Name: relationship_type; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.relationship_type AS ENUM (
@@ -640,10 +575,8 @@ CREATE TYPE public.relationship_type AS ENUM (
 );
 
 
-ALTER TYPE public.relationship_type OWNER TO pato;
 
 --
--- Name: resection_status; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.resection_status AS ENUM (
@@ -654,10 +587,8 @@ CREATE TYPE public.resection_status AS ENUM (
 );
 
 
-ALTER TYPE public.resection_status OWNER TO pato;
 
 --
--- Name: sequencing_strategies; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.sequencing_strategies AS ENUM (
@@ -667,10 +598,8 @@ CREATE TYPE public.sequencing_strategies AS ENUM (
 );
 
 
-ALTER TYPE public.sequencing_strategies OWNER TO pato;
 
 --
--- Name: sequencing_strategy; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.sequencing_strategy AS ENUM (
@@ -708,10 +637,8 @@ CREATE TYPE public.sequencing_strategy AS ENUM (
 );
 
 
-ALTER TYPE public.sequencing_strategy OWNER TO pato;
 
 --
--- Name: specimen_donor_treatment_type; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.specimen_donor_treatment_type AS ENUM (
@@ -730,10 +657,8 @@ CREATE TYPE public.specimen_donor_treatment_type AS ENUM (
 );
 
 
-ALTER TYPE public.specimen_donor_treatment_type OWNER TO pato;
 
 --
--- Name: specimen_processing; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.specimen_processing AS ENUM (
@@ -754,10 +679,8 @@ CREATE TYPE public.specimen_processing AS ENUM (
 );
 
 
-ALTER TYPE public.specimen_processing OWNER TO pato;
 
 --
--- Name: specimen_storage; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.specimen_storage AS ENUM (
@@ -772,10 +695,8 @@ CREATE TYPE public.specimen_storage AS ENUM (
 );
 
 
-ALTER TYPE public.specimen_storage OWNER TO pato;
 
 --
--- Name: specimen_type; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.specimen_type AS ENUM (
@@ -813,10 +734,8 @@ CREATE TYPE public.specimen_type AS ENUM (
 );
 
 
-ALTER TYPE public.specimen_type OWNER TO pato;
 
 --
--- Name: therapeutic_intent; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.therapeutic_intent AS ENUM (
@@ -828,10 +747,8 @@ CREATE TYPE public.therapeutic_intent AS ENUM (
 );
 
 
-ALTER TYPE public.therapeutic_intent OWNER TO pato;
 
 --
--- Name: therapy_response; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.therapy_response AS ENUM (
@@ -844,10 +761,8 @@ CREATE TYPE public.therapy_response AS ENUM (
 );
 
 
-ALTER TYPE public.therapy_response OWNER TO pato;
 
 --
--- Name: therapy_type; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.therapy_type AS ENUM (
@@ -866,10 +781,8 @@ CREATE TYPE public.therapy_type AS ENUM (
 );
 
 
-ALTER TYPE public.therapy_type OWNER TO pato;
 
 --
--- Name: tipo_amostra; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.tipo_amostra AS ENUM (
@@ -878,10 +791,8 @@ CREATE TYPE public.tipo_amostra AS ENUM (
 );
 
 
-ALTER TYPE public.tipo_amostra OWNER TO pato;
 
 --
--- Name: variant_type; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.variant_type AS ENUM (
@@ -909,10 +820,8 @@ CREATE TYPE public.variant_type AS ENUM (
 );
 
 
-ALTER TYPE public.variant_type OWNER TO pato;
 
 --
--- Name: yes_no; Type: TYPE; Schema: public; Owner: pato
 --
 
 CREATE TYPE public.yes_no AS ENUM (
@@ -922,14 +831,12 @@ CREATE TYPE public.yes_no AS ENUM (
 );
 
 
-ALTER TYPE public.yes_no OWNER TO pato;
 
 SET default_tablespace = '';
 
 SET default_with_oids = false;
 
 --
--- Name: amostra; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.amostra (
@@ -946,10 +853,8 @@ CREATE TABLE public.amostra (
 );
 
 
-ALTER TABLE public.amostra OWNER TO pato;
 
 --
--- Name: amostra_id_amostra_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.amostra_id_amostra_seq
@@ -960,17 +865,14 @@ CREATE SEQUENCE public.amostra_id_amostra_seq
     CACHE 1;
 
 
-ALTER TABLE public.amostra_id_amostra_seq OWNER TO pato;
 
 --
--- Name: amostra_id_amostra_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.amostra_id_amostra_seq OWNED BY public.amostra.id_amostra;
 
 
 --
--- Name: banco_de_anotacao; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.banco_de_anotacao (
@@ -980,10 +882,8 @@ CREATE TABLE public.banco_de_anotacao (
 );
 
 
-ALTER TABLE public.banco_de_anotacao OWNER TO pato;
 
 --
--- Name: banco_de_anotacao_id_banco_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.banco_de_anotacao_id_banco_seq
@@ -994,17 +894,14 @@ CREATE SEQUENCE public.banco_de_anotacao_id_banco_seq
     CACHE 1;
 
 
-ALTER TABLE public.banco_de_anotacao_id_banco_seq OWNER TO pato;
 
 --
--- Name: banco_de_anotacao_id_banco_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.banco_de_anotacao_id_banco_seq OWNED BY public.banco_de_anotacao.id_banco;
 
 
 --
--- Name: coordenada_exon; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.coordenada_exon (
@@ -1017,10 +914,8 @@ CREATE TABLE public.coordenada_exon (
 );
 
 
-ALTER TABLE public.coordenada_exon OWNER TO pato;
 
 --
--- Name: coordenada_gene; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.coordenada_gene (
@@ -1039,10 +934,8 @@ CREATE TABLE public.coordenada_gene (
 );
 
 
-ALTER TABLE public.coordenada_gene OWNER TO pato;
 
 --
--- Name: coordenada_gene_id_coordenada_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.coordenada_gene_id_coordenada_seq
@@ -1053,17 +946,14 @@ CREATE SEQUENCE public.coordenada_gene_id_coordenada_seq
     CACHE 1;
 
 
-ALTER TABLE public.coordenada_gene_id_coordenada_seq OWNER TO pato;
 
 --
--- Name: coordenada_gene_id_coordenada_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.coordenada_gene_id_coordenada_seq OWNED BY public.coordenada_gene.id_coordenada;
 
 
 --
--- Name: coordenada_transcrito; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.coordenada_transcrito (
@@ -1084,10 +974,8 @@ CREATE TABLE public.coordenada_transcrito (
 );
 
 
-ALTER TABLE public.coordenada_transcrito OWNER TO pato;
 
 --
--- Name: coordenada_transcrito_id_coordenada_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.coordenada_transcrito_id_coordenada_seq
@@ -1098,17 +986,14 @@ CREATE SEQUENCE public.coordenada_transcrito_id_coordenada_seq
     CACHE 1;
 
 
-ALTER TABLE public.coordenada_transcrito_id_coordenada_seq OWNER TO pato;
 
 --
--- Name: coordenada_transcrito_id_coordenada_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.coordenada_transcrito_id_coordenada_seq OWNED BY public.coordenada_transcrito.id_coordenada;
 
 
 --
--- Name: diagnostico; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.diagnostico (
@@ -1127,10 +1012,8 @@ CREATE TABLE public.diagnostico (
 );
 
 
-ALTER TABLE public.diagnostico OWNER TO pato;
 
 --
--- Name: diagnostico_id_diagnostico_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.diagnostico_id_diagnostico_seq
@@ -1141,17 +1024,14 @@ CREATE SEQUENCE public.diagnostico_id_diagnostico_seq
     CACHE 1;
 
 
-ALTER TABLE public.diagnostico_id_diagnostico_seq OWNER TO pato;
 
 --
--- Name: diagnostico_id_diagnostico_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.diagnostico_id_diagnostico_seq OWNED BY public.diagnostico.id_diagnostico;
 
 
 --
--- Name: especime; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.especime (
@@ -1187,10 +1067,8 @@ CREATE TABLE public.especime (
 );
 
 
-ALTER TABLE public.especime OWNER TO pato;
 
 --
--- Name: especime_id_especime_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.especime_id_especime_seq
@@ -1201,17 +1079,14 @@ CREATE SEQUENCE public.especime_id_especime_seq
     CACHE 1;
 
 
-ALTER TABLE public.especime_id_especime_seq OWNER TO pato;
 
 --
--- Name: especime_id_especime_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.especime_id_especime_seq OWNED BY public.especime.id_especime;
 
 
 --
--- Name: exon; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.exon (
@@ -1223,10 +1098,8 @@ CREATE TABLE public.exon (
 );
 
 
-ALTER TABLE public.exon OWNER TO pato;
 
 --
--- Name: exon_id_exon_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.exon_id_exon_seq
@@ -1237,17 +1110,14 @@ CREATE SEQUENCE public.exon_id_exon_seq
     CACHE 1;
 
 
-ALTER TABLE public.exon_id_exon_seq OWNER TO pato;
 
 --
--- Name: exon_id_exon_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.exon_id_exon_seq OWNED BY public.exon.id_exon;
 
 
 --
--- Name: experim_express_genica_utiliza_amostra; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.experim_express_genica_utiliza_amostra (
@@ -1261,10 +1131,8 @@ CREATE TABLE public.experim_express_genica_utiliza_amostra (
 );
 
 
-ALTER TABLE public.experim_express_genica_utiliza_amostra OWNER TO pato;
 
 --
--- Name: experim_express_proteica_utiliza_amostra; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.experim_express_proteica_utiliza_amostra (
@@ -1273,10 +1141,8 @@ CREATE TABLE public.experim_express_proteica_utiliza_amostra (
 );
 
 
-ALTER TABLE public.experim_express_proteica_utiliza_amostra OWNER TO pato;
 
 --
--- Name: experim_mutacao_utiliza_amostra; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.experim_mutacao_utiliza_amostra (
@@ -1291,10 +1157,8 @@ CREATE TABLE public.experim_mutacao_utiliza_amostra (
 );
 
 
-ALTER TABLE public.experim_mutacao_utiliza_amostra OWNER TO pato;
 
 --
--- Name: experim_redes_genicas_analisa_gene; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.experim_redes_genicas_analisa_gene (
@@ -1305,10 +1169,8 @@ CREATE TABLE public.experim_redes_genicas_analisa_gene (
 );
 
 
-ALTER TABLE public.experim_redes_genicas_analisa_gene OWNER TO pato;
 
 --
--- Name: experim_redes_genicas_utiliza_amostra; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.experim_redes_genicas_utiliza_amostra (
@@ -1317,10 +1179,8 @@ CREATE TABLE public.experim_redes_genicas_utiliza_amostra (
 );
 
 
-ALTER TABLE public.experim_redes_genicas_utiliza_amostra OWNER TO pato;
 
 --
--- Name: experim_variacao_de_splicing_analisa_transcrito_em_amostra; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.experim_variacao_de_splicing_analisa_transcrito_em_amostra (
@@ -1349,10 +1209,8 @@ CREATE TABLE public.experim_variacao_de_splicing_analisa_transcrito_em_amostra (
 );
 
 
-ALTER TABLE public.experim_variacao_de_splicing_analisa_transcrito_em_amostra OWNER TO pato;
 
 --
--- Name: experim_variacao_de_splicing_utiliza_amostra; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.experim_variacao_de_splicing_utiliza_amostra (
@@ -1361,10 +1219,8 @@ CREATE TABLE public.experim_variacao_de_splicing_utiliza_amostra (
 );
 
 
-ALTER TABLE public.experim_variacao_de_splicing_utiliza_amostra OWNER TO pato;
 
 --
--- Name: experim_variacao_de_splicing_u_id_experim_variacao_splicing_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.experim_variacao_de_splicing_u_id_experim_variacao_splicing_seq
@@ -1375,17 +1231,14 @@ CREATE SEQUENCE public.experim_variacao_de_splicing_u_id_experim_variacao_splici
     CACHE 1;
 
 
-ALTER TABLE public.experim_variacao_de_splicing_u_id_experim_variacao_splicing_seq OWNER TO pato;
 
 --
--- Name: experim_variacao_de_splicing_u_id_experim_variacao_splicing_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.experim_variacao_de_splicing_u_id_experim_variacao_splicing_seq OWNED BY public.experim_variacao_de_splicing_utiliza_amostra.id_experim_variacao_splicing;
 
 
 --
--- Name: experimento_de_expressao_genica; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.experimento_de_expressao_genica (
@@ -1414,10 +1267,8 @@ CREATE TABLE public.experimento_de_expressao_genica (
 );
 
 
-ALTER TABLE public.experimento_de_expressao_genica OWNER TO pato;
 
 --
--- Name: experimento_de_expressao_genica_id_exp_genica_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.experimento_de_expressao_genica_id_exp_genica_seq
@@ -1428,17 +1279,14 @@ CREATE SEQUENCE public.experimento_de_expressao_genica_id_exp_genica_seq
     CACHE 1;
 
 
-ALTER TABLE public.experimento_de_expressao_genica_id_exp_genica_seq OWNER TO pato;
 
 --
--- Name: experimento_de_expressao_genica_id_exp_genica_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.experimento_de_expressao_genica_id_exp_genica_seq OWNED BY public.experimento_de_expressao_genica.id_exp_genica;
 
 
 --
--- Name: experimento_de_mutacao_somatica; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.experimento_de_mutacao_somatica (
@@ -1468,10 +1316,8 @@ CREATE TABLE public.experimento_de_mutacao_somatica (
 );
 
 
-ALTER TABLE public.experimento_de_mutacao_somatica OWNER TO pato;
 
 --
--- Name: experimento_de_mutacao_somatica_id_exp_mut_somatica_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.experimento_de_mutacao_somatica_id_exp_mut_somatica_seq
@@ -1482,17 +1328,14 @@ CREATE SEQUENCE public.experimento_de_mutacao_somatica_id_exp_mut_somatica_seq
     CACHE 1;
 
 
-ALTER TABLE public.experimento_de_mutacao_somatica_id_exp_mut_somatica_seq OWNER TO pato;
 
 --
--- Name: experimento_de_mutacao_somatica_id_exp_mut_somatica_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.experimento_de_mutacao_somatica_id_exp_mut_somatica_seq OWNED BY public.experimento_de_mutacao_somatica.id_exp_mut_somatica;
 
 
 --
--- Name: experimento_de_redes_genicas; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.experimento_de_redes_genicas (
@@ -1504,10 +1347,8 @@ CREATE TABLE public.experimento_de_redes_genicas (
 );
 
 
-ALTER TABLE public.experimento_de_redes_genicas OWNER TO pato;
 
 --
--- Name: experimento_de_redes_genicas_id_experimento_redes_genicas_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.experimento_de_redes_genicas_id_experimento_redes_genicas_seq
@@ -1518,17 +1359,14 @@ CREATE SEQUENCE public.experimento_de_redes_genicas_id_experimento_redes_genicas
     CACHE 1;
 
 
-ALTER TABLE public.experimento_de_redes_genicas_id_experimento_redes_genicas_seq OWNER TO pato;
 
 --
--- Name: experimento_de_redes_genicas_id_experimento_redes_genicas_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.experimento_de_redes_genicas_id_experimento_redes_genicas_seq OWNED BY public.experimento_de_redes_genicas.id_experimento_redes_genicas;
 
 
 --
--- Name: experimento_de_variacao_de_splicing; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.experimento_de_variacao_de_splicing (
@@ -1552,10 +1390,8 @@ CREATE TABLE public.experimento_de_variacao_de_splicing (
 );
 
 
-ALTER TABLE public.experimento_de_variacao_de_splicing OWNER TO pato;
 
 --
--- Name: experimento_de_variacao_de_spl_id_experim_variacao_splicing_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.experimento_de_variacao_de_spl_id_experim_variacao_splicing_seq
@@ -1566,17 +1402,14 @@ CREATE SEQUENCE public.experimento_de_variacao_de_spl_id_experim_variacao_splici
     CACHE 1;
 
 
-ALTER TABLE public.experimento_de_variacao_de_spl_id_experim_variacao_splicing_seq OWNER TO pato;
 
 --
--- Name: experimento_de_variacao_de_spl_id_experim_variacao_splicing_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.experimento_de_variacao_de_spl_id_experim_variacao_splicing_seq OWNED BY public.experimento_de_variacao_de_splicing.id_experim_variacao_splicing;
 
 
 --
--- Name: exposicao; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.exposicao (
@@ -1592,10 +1425,8 @@ CREATE TABLE public.exposicao (
 );
 
 
-ALTER TABLE public.exposicao OWNER TO pato;
 
 --
--- Name: exposicao_id_exposicao_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.exposicao_id_exposicao_seq
@@ -1606,17 +1437,14 @@ CREATE SEQUENCE public.exposicao_id_exposicao_seq
     CACHE 1;
 
 
-ALTER TABLE public.exposicao_id_exposicao_seq OWNER TO pato;
 
 --
--- Name: exposicao_id_exposicao_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.exposicao_id_exposicao_seq OWNED BY public.exposicao.id_exposicao;
 
 
 --
--- Name: expressao_microarray_avalia_gene_em_amostra; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.expressao_microarray_avalia_gene_em_amostra (
@@ -1627,10 +1455,8 @@ CREATE TABLE public.expressao_microarray_avalia_gene_em_amostra (
 );
 
 
-ALTER TABLE public.expressao_microarray_avalia_gene_em_amostra OWNER TO pato;
 
 --
--- Name: expressao_proteica; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.expressao_proteica (
@@ -1651,10 +1477,8 @@ CREATE TABLE public.expressao_proteica (
 );
 
 
-ALTER TABLE public.expressao_proteica OWNER TO pato;
 
 --
--- Name: expressao_proteica_diz_respeito_a_gene_em_amostra; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.expressao_proteica_diz_respeito_a_gene_em_amostra (
@@ -1668,10 +1492,8 @@ CREATE TABLE public.expressao_proteica_diz_respeito_a_gene_em_amostra (
 );
 
 
-ALTER TABLE public.expressao_proteica_diz_respeito_a_gene_em_amostra OWNER TO pato;
 
 --
--- Name: expressao_proteica_id_exp_proteica_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.expressao_proteica_id_exp_proteica_seq
@@ -1682,17 +1504,14 @@ CREATE SEQUENCE public.expressao_proteica_id_exp_proteica_seq
     CACHE 1;
 
 
-ALTER TABLE public.expressao_proteica_id_exp_proteica_seq OWNER TO pato;
 
 --
--- Name: expressao_proteica_id_exp_proteica_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.expressao_proteica_id_exp_proteica_seq OWNED BY public.expressao_proteica.id_exp_proteica;
 
 
 --
--- Name: familiar; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.familiar (
@@ -1707,10 +1526,8 @@ CREATE TABLE public.familiar (
 );
 
 
-ALTER TABLE public.familiar OWNER TO pato;
 
 --
--- Name: gene; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.gene (
@@ -1720,10 +1537,8 @@ CREATE TABLE public.gene (
 );
 
 
-ALTER TABLE public.gene OWNER TO pato;
 
 --
--- Name: gene_alias; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.gene_alias (
@@ -1735,10 +1550,8 @@ CREATE TABLE public.gene_alias (
 );
 
 
-ALTER TABLE public.gene_alias OWNER TO pato;
 
 --
--- Name: gene_alias_id_gene_alias_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.gene_alias_id_gene_alias_seq
@@ -1749,17 +1562,14 @@ CREATE SEQUENCE public.gene_alias_id_gene_alias_seq
     CACHE 1;
 
 
-ALTER TABLE public.gene_alias_id_gene_alias_seq OWNER TO pato;
 
 --
--- Name: gene_alias_id_gene_alias_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.gene_alias_id_gene_alias_seq OWNED BY public.gene_alias.id_gene_alias;
 
 
 --
--- Name: gene_id_gene_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.gene_id_gene_seq
@@ -1770,17 +1580,14 @@ CREATE SEQUENCE public.gene_id_gene_seq
     CACHE 1;
 
 
-ALTER TABLE public.gene_id_gene_seq OWNER TO pato;
 
 --
--- Name: gene_id_gene_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.gene_id_gene_seq OWNED BY public.gene.id_gene;
 
 
 --
--- Name: gene_nomeia_coordenada; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.gene_nomeia_coordenada (
@@ -1789,10 +1596,8 @@ CREATE TABLE public.gene_nomeia_coordenada (
 );
 
 
-ALTER TABLE public.gene_nomeia_coordenada OWNER TO pato;
 
 --
--- Name: gene_referencia; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.gene_referencia (
@@ -1803,10 +1608,8 @@ CREATE TABLE public.gene_referencia (
 );
 
 
-ALTER TABLE public.gene_referencia OWNER TO pato;
 
 --
--- Name: gene_referencia_id_gene_ref_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.gene_referencia_id_gene_ref_seq
@@ -1817,17 +1620,14 @@ CREATE SEQUENCE public.gene_referencia_id_gene_ref_seq
     CACHE 1;
 
 
-ALTER TABLE public.gene_referencia_id_gene_ref_seq OWNER TO pato;
 
 --
--- Name: gene_referencia_id_gene_ref_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.gene_referencia_id_gene_ref_seq OWNED BY public.gene_referencia.id_gene_ref;
 
 
 --
--- Name: genes_v37; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.genes_v37 (
@@ -1848,10 +1648,8 @@ CREATE TABLE public.genes_v37 (
 );
 
 
-ALTER TABLE public.genes_v37 OWNER TO pato;
 
 --
--- Name: genes_v38; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.genes_v38 (
@@ -1873,10 +1671,8 @@ CREATE TABLE public.genes_v38 (
 );
 
 
-ALTER TABLE public.genes_v38 OWNER TO pato;
 
 --
--- Name: icgc_donor; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.icgc_donor (
@@ -1912,10 +1708,8 @@ CREATE TABLE public.icgc_donor (
 );
 
 
-ALTER TABLE public.icgc_donor OWNER TO pato;
 
 --
--- Name: icgc_donor_exposure; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.icgc_donor_exposure (
@@ -1932,10 +1726,8 @@ CREATE TABLE public.icgc_donor_exposure (
 );
 
 
-ALTER TABLE public.icgc_donor_exposure OWNER TO pato;
 
 --
--- Name: icgc_donor_family; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.icgc_donor_family (
@@ -1953,10 +1745,8 @@ CREATE TABLE public.icgc_donor_family (
 );
 
 
-ALTER TABLE public.icgc_donor_family OWNER TO pato;
 
 --
--- Name: icgc_donor_therapy; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.icgc_donor_therapy (
@@ -1982,10 +1772,8 @@ CREATE TABLE public.icgc_donor_therapy (
 );
 
 
-ALTER TABLE public.icgc_donor_therapy OWNER TO pato;
 
 --
--- Name: icgc_exp_seq; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.icgc_exp_seq (
@@ -2018,10 +1806,8 @@ CREATE TABLE public.icgc_exp_seq (
 );
 
 
-ALTER TABLE public.icgc_exp_seq OWNER TO pato;
 
 --
--- Name: icgc_protein_expression; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.icgc_protein_expression (
@@ -2045,10 +1831,8 @@ CREATE TABLE public.icgc_protein_expression (
 );
 
 
-ALTER TABLE public.icgc_protein_expression OWNER TO pato;
 
 --
--- Name: icgc_sample; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.icgc_sample (
@@ -2066,10 +1850,8 @@ CREATE TABLE public.icgc_sample (
 );
 
 
-ALTER TABLE public.icgc_sample OWNER TO pato;
 
 --
--- Name: icgc_simple_somatic_mutation; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.icgc_simple_somatic_mutation (
@@ -2125,10 +1907,8 @@ CREATE TABLE public.icgc_simple_somatic_mutation (
 );
 
 
-ALTER TABLE public.icgc_simple_somatic_mutation OWNER TO pato;
 
 --
--- Name: icgc_simple_somatic_mutation_chave_serial_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.icgc_simple_somatic_mutation_chave_serial_seq
@@ -2139,17 +1919,14 @@ CREATE SEQUENCE public.icgc_simple_somatic_mutation_chave_serial_seq
     CACHE 1;
 
 
-ALTER TABLE public.icgc_simple_somatic_mutation_chave_serial_seq OWNER TO pato;
 
 --
--- Name: icgc_simple_somatic_mutation_chave_serial_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.icgc_simple_somatic_mutation_chave_serial_seq OWNED BY public.icgc_simple_somatic_mutation.chave_serial;
 
 
 --
--- Name: icgc_specimen; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.icgc_specimen (
@@ -2187,10 +1964,8 @@ CREATE TABLE public.icgc_specimen (
 );
 
 
-ALTER TABLE public.icgc_specimen OWNER TO pato;
 
 --
--- Name: marcador; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.marcador (
@@ -2200,10 +1975,8 @@ CREATE TABLE public.marcador (
 );
 
 
-ALTER TABLE public.marcador OWNER TO pato;
 
 --
--- Name: marcador_auxilia_diagnóstico; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public."marcador_auxilia_diagnóstico" (
@@ -2215,10 +1988,8 @@ CREATE TABLE public."marcador_auxilia_diagnóstico" (
 );
 
 
-ALTER TABLE public."marcador_auxilia_diagnóstico" OWNER TO pato;
 
 --
--- Name: marcador_id_marcador_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.marcador_id_marcador_seq
@@ -2229,17 +2000,14 @@ CREATE SEQUENCE public.marcador_id_marcador_seq
     CACHE 1;
 
 
-ALTER TABLE public.marcador_id_marcador_seq OWNER TO pato;
 
 --
--- Name: marcador_id_marcador_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.marcador_id_marcador_seq OWNED BY public.marcador.id_marcador;
 
 
 --
--- Name: mirnas; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.mirnas (
@@ -2260,10 +2028,8 @@ CREATE TABLE public.mirnas (
 );
 
 
-ALTER TABLE public.mirnas OWNER TO pato;
 
 --
--- Name: mutacao_estrutural_to_from_gene_em_amostra; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.mutacao_estrutural_to_from_gene_em_amostra (
@@ -2296,10 +2062,8 @@ CREATE TABLE public.mutacao_estrutural_to_from_gene_em_amostra (
 );
 
 
-ALTER TABLE public.mutacao_estrutural_to_from_gene_em_amostra OWNER TO pato;
 
 --
--- Name: mutacao_simples_avalia_gene_em_amostra; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.mutacao_simples_avalia_gene_em_amostra (
@@ -2329,10 +2093,8 @@ CREATE TABLE public.mutacao_simples_avalia_gene_em_amostra (
 );
 
 
-ALTER TABLE public.mutacao_simples_avalia_gene_em_amostra OWNER TO pato;
 
 --
--- Name: mutacao_var_copias_afeta_gene_em_amostra; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.mutacao_var_copias_afeta_gene_em_amostra (
@@ -2358,10 +2120,8 @@ CREATE TABLE public.mutacao_var_copias_afeta_gene_em_amostra (
 );
 
 
-ALTER TABLE public.mutacao_var_copias_afeta_gene_em_amostra OWNER TO pato;
 
 --
--- Name: paciente; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.paciente (
@@ -2392,10 +2152,8 @@ CREATE TABLE public.paciente (
 );
 
 
-ALTER TABLE public.paciente OWNER TO pato;
 
 --
--- Name: paciente_id_paciente_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.paciente_id_paciente_seq
@@ -2406,17 +2164,14 @@ CREATE SEQUENCE public.paciente_id_paciente_seq
     CACHE 1;
 
 
-ALTER TABLE public.paciente_id_paciente_seq OWNER TO pato;
 
 --
--- Name: paciente_id_paciente_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.paciente_id_paciente_seq OWNED BY public.paciente.id_paciente;
 
 
 --
--- Name: sequenciamento_avalia_gene_em_amostra; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.sequenciamento_avalia_gene_em_amostra (
@@ -2436,10 +2191,8 @@ CREATE TABLE public.sequenciamento_avalia_gene_em_amostra (
 );
 
 
-ALTER TABLE public.sequenciamento_avalia_gene_em_amostra OWNER TO pato;
 
 --
--- Name: sequenciamento_avalia_transcrito_em_amostra; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.sequenciamento_avalia_transcrito_em_amostra (
@@ -2456,10 +2209,8 @@ CREATE TABLE public.sequenciamento_avalia_transcrito_em_amostra (
 );
 
 
-ALTER TABLE public.sequenciamento_avalia_transcrito_em_amostra OWNER TO pato;
 
 --
--- Name: transcrito; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.transcrito (
@@ -2470,10 +2221,8 @@ CREATE TABLE public.transcrito (
 );
 
 
-ALTER TABLE public.transcrito OWNER TO pato;
 
 --
--- Name: transcrito_id_transcrito_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.transcrito_id_transcrito_seq
@@ -2484,17 +2233,14 @@ CREATE SEQUENCE public.transcrito_id_transcrito_seq
     CACHE 1;
 
 
-ALTER TABLE public.transcrito_id_transcrito_seq OWNER TO pato;
 
 --
--- Name: transcrito_id_transcrito_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.transcrito_id_transcrito_seq OWNED BY public.transcrito.id_transcrito;
 
 
 --
--- Name: transcrito_nomeia_coordenada; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.transcrito_nomeia_coordenada (
@@ -2503,10 +2249,8 @@ CREATE TABLE public.transcrito_nomeia_coordenada (
 );
 
 
-ALTER TABLE public.transcrito_nomeia_coordenada OWNER TO pato;
 
 --
--- Name: transcritos_v37; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.transcritos_v37 (
@@ -2533,10 +2277,8 @@ CREATE TABLE public.transcritos_v37 (
 );
 
 
-ALTER TABLE public.transcritos_v37 OWNER TO pato;
 
 --
--- Name: transcritos_v38; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.transcritos_v38 (
@@ -2563,10 +2305,8 @@ CREATE TABLE public.transcritos_v38 (
 );
 
 
-ALTER TABLE public.transcritos_v38 OWNER TO pato;
 
 --
--- Name: tratamento; Type: TABLE; Schema: public; Owner: pato
 --
 
 CREATE TABLE public.tratamento (
@@ -2590,10 +2330,8 @@ CREATE TABLE public.tratamento (
 );
 
 
-ALTER TABLE public.tratamento OWNER TO pato;
 
 --
--- Name: tratamento_id_tratamento_seq; Type: SEQUENCE; Schema: public; Owner: pato
 --
 
 CREATE SEQUENCE public.tratamento_id_tratamento_seq
@@ -2604,171 +2342,146 @@ CREATE SEQUENCE public.tratamento_id_tratamento_seq
     CACHE 1;
 
 
-ALTER TABLE public.tratamento_id_tratamento_seq OWNER TO pato;
 
 --
--- Name: tratamento_id_tratamento_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: pato
 --
 
 ALTER SEQUENCE public.tratamento_id_tratamento_seq OWNED BY public.tratamento.id_tratamento;
 
 
 --
--- Name: id_amostra; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.amostra ALTER COLUMN id_amostra SET DEFAULT nextval('public.amostra_id_amostra_seq'::regclass);
 
 
 --
--- Name: id_banco; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.banco_de_anotacao ALTER COLUMN id_banco SET DEFAULT nextval('public.banco_de_anotacao_id_banco_seq'::regclass);
 
 
 --
--- Name: id_coordenada; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.coordenada_gene ALTER COLUMN id_coordenada SET DEFAULT nextval('public.coordenada_gene_id_coordenada_seq'::regclass);
 
 
 --
--- Name: id_coordenada; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.coordenada_transcrito ALTER COLUMN id_coordenada SET DEFAULT nextval('public.coordenada_transcrito_id_coordenada_seq'::regclass);
 
 
 --
--- Name: id_diagnostico; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.diagnostico ALTER COLUMN id_diagnostico SET DEFAULT nextval('public.diagnostico_id_diagnostico_seq'::regclass);
 
 
 --
--- Name: id_especime; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.especime ALTER COLUMN id_especime SET DEFAULT nextval('public.especime_id_especime_seq'::regclass);
 
 
 --
--- Name: id_exon; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.exon ALTER COLUMN id_exon SET DEFAULT nextval('public.exon_id_exon_seq'::regclass);
 
 
 --
--- Name: id_experim_variacao_splicing; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_variacao_de_splicing_utiliza_amostra ALTER COLUMN id_experim_variacao_splicing SET DEFAULT nextval('public.experim_variacao_de_splicing_u_id_experim_variacao_splicing_seq'::regclass);
 
 
 --
--- Name: id_exp_genica; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experimento_de_expressao_genica ALTER COLUMN id_exp_genica SET DEFAULT nextval('public.experimento_de_expressao_genica_id_exp_genica_seq'::regclass);
 
 
 --
--- Name: id_exp_mut_somatica; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experimento_de_mutacao_somatica ALTER COLUMN id_exp_mut_somatica SET DEFAULT nextval('public.experimento_de_mutacao_somatica_id_exp_mut_somatica_seq'::regclass);
 
 
 --
--- Name: id_experimento_redes_genicas; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experimento_de_redes_genicas ALTER COLUMN id_experimento_redes_genicas SET DEFAULT nextval('public.experimento_de_redes_genicas_id_experimento_redes_genicas_seq'::regclass);
 
 
 --
--- Name: id_experim_variacao_splicing; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experimento_de_variacao_de_splicing ALTER COLUMN id_experim_variacao_splicing SET DEFAULT nextval('public.experimento_de_variacao_de_spl_id_experim_variacao_splicing_seq'::regclass);
 
 
 --
--- Name: id_exposicao; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.exposicao ALTER COLUMN id_exposicao SET DEFAULT nextval('public.exposicao_id_exposicao_seq'::regclass);
 
 
 --
--- Name: id_exp_proteica; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.expressao_proteica ALTER COLUMN id_exp_proteica SET DEFAULT nextval('public.expressao_proteica_id_exp_proteica_seq'::regclass);
 
 
 --
--- Name: id_gene; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.gene ALTER COLUMN id_gene SET DEFAULT nextval('public.gene_id_gene_seq'::regclass);
 
 
 --
--- Name: id_gene_alias; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.gene_alias ALTER COLUMN id_gene_alias SET DEFAULT nextval('public.gene_alias_id_gene_alias_seq'::regclass);
 
 
 --
--- Name: id_gene_ref; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.gene_referencia ALTER COLUMN id_gene_ref SET DEFAULT nextval('public.gene_referencia_id_gene_ref_seq'::regclass);
 
 
 --
--- Name: chave_serial; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.icgc_simple_somatic_mutation ALTER COLUMN chave_serial SET DEFAULT nextval('public.icgc_simple_somatic_mutation_chave_serial_seq'::regclass);
 
 
 --
--- Name: id_marcador; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.marcador ALTER COLUMN id_marcador SET DEFAULT nextval('public.marcador_id_marcador_seq'::regclass);
 
 
 --
--- Name: id_paciente; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.paciente ALTER COLUMN id_paciente SET DEFAULT nextval('public.paciente_id_paciente_seq'::regclass);
 
 
 --
--- Name: id_transcrito; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.transcrito ALTER COLUMN id_transcrito SET DEFAULT nextval('public.transcrito_id_transcrito_seq'::regclass);
 
 
 --
--- Name: id_tratamento; Type: DEFAULT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.tratamento ALTER COLUMN id_tratamento SET DEFAULT nextval('public.tratamento_id_tratamento_seq'::regclass);
 
 
 --
--- Name: amostra_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.amostra
@@ -2776,7 +2489,6 @@ ALTER TABLE ONLY public.amostra
 
 
 --
--- Name: banco_de_anotacao_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.banco_de_anotacao
@@ -2784,7 +2496,6 @@ ALTER TABLE ONLY public.banco_de_anotacao
 
 
 --
--- Name: coordenada_gene_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.coordenada_gene
@@ -2792,7 +2503,6 @@ ALTER TABLE ONLY public.coordenada_gene
 
 
 --
--- Name: coordenada_transcrito_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.coordenada_transcrito
@@ -2800,7 +2510,6 @@ ALTER TABLE ONLY public.coordenada_transcrito
 
 
 --
--- Name: diagnostico_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.diagnostico
@@ -2808,7 +2517,6 @@ ALTER TABLE ONLY public.diagnostico
 
 
 --
--- Name: especime_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.especime
@@ -2816,7 +2524,6 @@ ALTER TABLE ONLY public.especime
 
 
 --
--- Name: exon_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.exon
@@ -2824,7 +2531,6 @@ ALTER TABLE ONLY public.exon
 
 
 --
--- Name: exp_expressao_genica_utiliza_amostra; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_express_genica_utiliza_amostra
@@ -2832,7 +2538,6 @@ ALTER TABLE ONLY public.experim_express_genica_utiliza_amostra
 
 
 --
--- Name: experim_variacao_de_splicing_utiliza_amostra_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_variacao_de_splicing_utiliza_amostra
@@ -2840,7 +2545,6 @@ ALTER TABLE ONLY public.experim_variacao_de_splicing_utiliza_amostra
 
 
 --
--- Name: experimento_de_expressao_genica_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experimento_de_expressao_genica
@@ -2848,7 +2552,6 @@ ALTER TABLE ONLY public.experimento_de_expressao_genica
 
 
 --
--- Name: experimento_de_mutacao_somatica_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experimento_de_mutacao_somatica
@@ -2856,7 +2559,6 @@ ALTER TABLE ONLY public.experimento_de_mutacao_somatica
 
 
 --
--- Name: experimento_de_redes_genicas_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experimento_de_redes_genicas
@@ -2864,7 +2566,6 @@ ALTER TABLE ONLY public.experimento_de_redes_genicas
 
 
 --
--- Name: experimento_de_variacao_de_splicing_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experimento_de_variacao_de_splicing
@@ -2872,7 +2573,6 @@ ALTER TABLE ONLY public.experimento_de_variacao_de_splicing
 
 
 --
--- Name: exposicao_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.exposicao
@@ -2880,7 +2580,6 @@ ALTER TABLE ONLY public.exposicao
 
 
 --
--- Name: expressao_proteica_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.expressao_proteica
@@ -2888,7 +2587,6 @@ ALTER TABLE ONLY public.expressao_proteica
 
 
 --
--- Name: gene_alias_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.gene_alias
@@ -2896,7 +2594,6 @@ ALTER TABLE ONLY public.gene_alias
 
 
 --
--- Name: gene_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.gene
@@ -2904,7 +2601,6 @@ ALTER TABLE ONLY public.gene
 
 
 --
--- Name: gene_referencia_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.gene_referencia
@@ -2912,7 +2608,6 @@ ALTER TABLE ONLY public.gene_referencia
 
 
 --
--- Name: icgc_donor_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.icgc_donor
@@ -2920,7 +2615,6 @@ ALTER TABLE ONLY public.icgc_donor
 
 
 --
--- Name: icgc_protein_expression_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.icgc_protein_expression
@@ -2928,7 +2622,6 @@ ALTER TABLE ONLY public.icgc_protein_expression
 
 
 --
--- Name: icgc_sample_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.icgc_sample
@@ -2936,7 +2629,6 @@ ALTER TABLE ONLY public.icgc_sample
 
 
 --
--- Name: icgc_specimen_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.icgc_specimen
@@ -2944,7 +2636,6 @@ ALTER TABLE ONLY public.icgc_specimen
 
 
 --
--- Name: marcador_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.marcador
@@ -2952,7 +2643,6 @@ ALTER TABLE ONLY public.marcador
 
 
 --
--- Name: paciente_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.paciente
@@ -2960,7 +2650,6 @@ ALTER TABLE ONLY public.paciente
 
 
 --
--- Name: pk_coordenada_exon; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.coordenada_exon
@@ -2968,7 +2657,6 @@ ALTER TABLE ONLY public.coordenada_exon
 
 
 --
--- Name: pk_marcador_auxilia_diagnóstico; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public."marcador_auxilia_diagnóstico"
@@ -2976,7 +2664,6 @@ ALTER TABLE ONLY public."marcador_auxilia_diagnóstico"
 
 
 --
--- Name: transcrito_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.transcrito
@@ -2984,7 +2671,6 @@ ALTER TABLE ONLY public.transcrito
 
 
 --
--- Name: tratamento_pkey; Type: CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.tratamento
@@ -2992,7 +2678,6 @@ ALTER TABLE ONLY public.tratamento
 
 
 --
--- Name: amostra_id_especime_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.amostra
@@ -3000,7 +2685,6 @@ ALTER TABLE ONLY public.amostra
 
 
 --
--- Name: amostra_id_paciente_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.amostra
@@ -3008,7 +2692,6 @@ ALTER TABLE ONLY public.amostra
 
 
 --
--- Name: coordenada_gene_id_gene_ref_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.coordenada_gene
@@ -3016,7 +2699,6 @@ ALTER TABLE ONLY public.coordenada_gene
 
 
 --
--- Name: diagnostico_id_especime_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.diagnostico
@@ -3024,7 +2706,6 @@ ALTER TABLE ONLY public.diagnostico
 
 
 --
--- Name: diagnostico_id_paciente_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.diagnostico
@@ -3032,7 +2713,6 @@ ALTER TABLE ONLY public.diagnostico
 
 
 --
--- Name: especime_id_paciente_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.especime
@@ -3040,7 +2720,6 @@ ALTER TABLE ONLY public.especime
 
 
 --
--- Name: exon_id_gene_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.exon
@@ -3048,7 +2727,6 @@ ALTER TABLE ONLY public.exon
 
 
 --
--- Name: exon_id_transcrito_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.exon
@@ -3056,7 +2734,6 @@ ALTER TABLE ONLY public.exon
 
 
 --
--- Name: experim_express_genica_utiliza_amostra_id_amostra_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_express_genica_utiliza_amostra
@@ -3064,7 +2741,6 @@ ALTER TABLE ONLY public.experim_express_genica_utiliza_amostra
 
 
 --
--- Name: experim_express_genica_utiliza_amostra_id_exp_genica_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_express_genica_utiliza_amostra
@@ -3072,7 +2748,6 @@ ALTER TABLE ONLY public.experim_express_genica_utiliza_amostra
 
 
 --
--- Name: experim_express_proteica_utiliza_amostra_id_amostra_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_express_proteica_utiliza_amostra
@@ -3080,7 +2755,6 @@ ALTER TABLE ONLY public.experim_express_proteica_utiliza_amostra
 
 
 --
--- Name: experim_express_proteica_utiliza_amostra_id_exp_proteica_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_express_proteica_utiliza_amostra
@@ -3088,7 +2762,6 @@ ALTER TABLE ONLY public.experim_express_proteica_utiliza_amostra
 
 
 --
--- Name: experim_mutacao_utiliza_amostra_id_amostra_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_mutacao_utiliza_amostra
@@ -3096,7 +2769,6 @@ ALTER TABLE ONLY public.experim_mutacao_utiliza_amostra
 
 
 --
--- Name: experim_mutacao_utiliza_amostra_id_exp_mut_somatica_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_mutacao_utiliza_amostra
@@ -3104,7 +2776,6 @@ ALTER TABLE ONLY public.experim_mutacao_utiliza_amostra
 
 
 --
--- Name: experim_redes_genicas_analisa_gene_id_gene_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_redes_genicas_analisa_gene
@@ -3112,7 +2783,6 @@ ALTER TABLE ONLY public.experim_redes_genicas_analisa_gene
 
 
 --
--- Name: experim_redes_genicas_analisa_id_experimento_redes_genicas_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_redes_genicas_analisa_gene
@@ -3120,7 +2790,6 @@ ALTER TABLE ONLY public.experim_redes_genicas_analisa_gene
 
 
 --
--- Name: experim_redes_genicas_utiliza_amostra_id_amostra_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_redes_genicas_utiliza_amostra
@@ -3128,7 +2797,6 @@ ALTER TABLE ONLY public.experim_redes_genicas_utiliza_amostra
 
 
 --
--- Name: experim_redes_genicas_utiliza_id_experimento_redes_genicas_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_redes_genicas_utiliza_amostra
@@ -3136,7 +2804,6 @@ ALTER TABLE ONLY public.experim_redes_genicas_utiliza_amostra
 
 
 --
--- Name: experim_variacao_de_splicing__id_experim_variacao_splicing_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_variacao_de_splicing_utiliza_amostra
@@ -3144,7 +2811,6 @@ ALTER TABLE ONLY public.experim_variacao_de_splicing_utiliza_amostra
 
 
 --
--- Name: experim_variacao_de_splicing_analisa_transcr_id_transcrito_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_variacao_de_splicing_analisa_transcrito_em_amostra
@@ -3152,7 +2818,6 @@ ALTER TABLE ONLY public.experim_variacao_de_splicing_analisa_transcrito_em_amost
 
 
 --
--- Name: experim_variacao_de_splicing_id_experim_variacao_splicing_fkey1; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_variacao_de_splicing_analisa_transcrito_em_amostra
@@ -3160,7 +2825,6 @@ ALTER TABLE ONLY public.experim_variacao_de_splicing_analisa_transcrito_em_amost
 
 
 --
--- Name: experim_variacao_de_splicing_utiliza_amostra_id_amostra_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.experim_variacao_de_splicing_utiliza_amostra
@@ -3168,7 +2832,6 @@ ALTER TABLE ONLY public.experim_variacao_de_splicing_utiliza_amostra
 
 
 --
--- Name: exposicao_id_paciente_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.exposicao
@@ -3176,7 +2839,6 @@ ALTER TABLE ONLY public.exposicao
 
 
 --
--- Name: expressao_microarray_avalia_gene_em_amostra_id_exp_genica_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.expressao_microarray_avalia_gene_em_amostra
@@ -3184,7 +2846,6 @@ ALTER TABLE ONLY public.expressao_microarray_avalia_gene_em_amostra
 
 
 --
--- Name: expressao_microarray_avalia_gene_em_amostra_id_gene_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.expressao_microarray_avalia_gene_em_amostra
@@ -3192,7 +2853,6 @@ ALTER TABLE ONLY public.expressao_microarray_avalia_gene_em_amostra
 
 
 --
--- Name: expressao_proteica_diz_respeito_a_gene_em__id_exp_proteica_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.expressao_proteica_diz_respeito_a_gene_em_amostra
@@ -3200,7 +2860,6 @@ ALTER TABLE ONLY public.expressao_proteica_diz_respeito_a_gene_em_amostra
 
 
 --
--- Name: expressao_proteica_diz_respeito_a_gene_em_amost_id_amostra_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.expressao_proteica_diz_respeito_a_gene_em_amostra
@@ -3208,7 +2867,6 @@ ALTER TABLE ONLY public.expressao_proteica_diz_respeito_a_gene_em_amostra
 
 
 --
--- Name: expressao_proteica_diz_respeito_a_gene_em_amostra_id_gene_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.expressao_proteica_diz_respeito_a_gene_em_amostra
@@ -3216,7 +2874,6 @@ ALTER TABLE ONLY public.expressao_proteica_diz_respeito_a_gene_em_amostra
 
 
 --
--- Name: expressao_proteica_id_amostra_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.expressao_proteica
@@ -3224,7 +2881,6 @@ ALTER TABLE ONLY public.expressao_proteica
 
 
 --
--- Name: familiar_id_paciente_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.familiar
@@ -3232,7 +2888,6 @@ ALTER TABLE ONLY public.familiar
 
 
 --
--- Name: gene_alias_id_banco_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.gene_alias
@@ -3240,7 +2895,6 @@ ALTER TABLE ONLY public.gene_alias
 
 
 --
--- Name: gene_alias_id_gene_ref_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.gene_alias
@@ -3248,7 +2902,6 @@ ALTER TABLE ONLY public.gene_alias
 
 
 --
--- Name: gene_id_banco_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.gene
@@ -3256,7 +2909,6 @@ ALTER TABLE ONLY public.gene
 
 
 --
--- Name: gene_nomeia_coordenada_id_coordenada_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.gene_nomeia_coordenada
@@ -3264,7 +2916,6 @@ ALTER TABLE ONLY public.gene_nomeia_coordenada
 
 
 --
--- Name: gene_nomeia_coordenada_id_gene_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.gene_nomeia_coordenada
@@ -3272,7 +2923,6 @@ ALTER TABLE ONLY public.gene_nomeia_coordenada
 
 
 --
--- Name: gene_referencia_id_banco_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.gene_referencia
@@ -3280,7 +2930,6 @@ ALTER TABLE ONLY public.gene_referencia
 
 
 --
--- Name: marcador_auxilia_diagnóstico_id_amostra_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public."marcador_auxilia_diagnóstico"
@@ -3288,7 +2937,6 @@ ALTER TABLE ONLY public."marcador_auxilia_diagnóstico"
 
 
 --
--- Name: marcador_auxilia_diagnóstico_id_marcador_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public."marcador_auxilia_diagnóstico"
@@ -3296,7 +2944,6 @@ ALTER TABLE ONLY public."marcador_auxilia_diagnóstico"
 
 
 --
--- Name: mutacao_estrutural_to_from_gene_em_amo_id_amostra_controle_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.mutacao_estrutural_to_from_gene_em_amostra
@@ -3304,7 +2951,6 @@ ALTER TABLE ONLY public.mutacao_estrutural_to_from_gene_em_amostra
 
 
 --
--- Name: mutacao_estrutural_to_from_gene_em_amo_id_exp_mut_somatica_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.mutacao_estrutural_to_from_gene_em_amostra
@@ -3312,7 +2958,6 @@ ALTER TABLE ONLY public.mutacao_estrutural_to_from_gene_em_amostra
 
 
 --
--- Name: mutacao_estrutural_to_from_gene_em_amostra_id_gene_from_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.mutacao_estrutural_to_from_gene_em_amostra
@@ -3320,7 +2965,6 @@ ALTER TABLE ONLY public.mutacao_estrutural_to_from_gene_em_amostra
 
 
 --
--- Name: mutacao_estrutural_to_from_gene_em_amostra_id_gene_to_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.mutacao_estrutural_to_from_gene_em_amostra
@@ -3328,7 +2972,6 @@ ALTER TABLE ONLY public.mutacao_estrutural_to_from_gene_em_amostra
 
 
 --
--- Name: mutacao_estrutural_to_from_gene_em_id_amostra_experimental_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.mutacao_estrutural_to_from_gene_em_amostra
@@ -3336,7 +2979,6 @@ ALTER TABLE ONLY public.mutacao_estrutural_to_from_gene_em_amostra
 
 
 --
--- Name: mutacao_simples_avalia_gene_em_amo_id_amostra_experimental_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.mutacao_simples_avalia_gene_em_amostra
@@ -3344,7 +2986,6 @@ ALTER TABLE ONLY public.mutacao_simples_avalia_gene_em_amostra
 
 
 --
--- Name: mutacao_simples_avalia_gene_em_amostra_id_amostra_controle_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.mutacao_simples_avalia_gene_em_amostra
@@ -3352,7 +2993,6 @@ ALTER TABLE ONLY public.mutacao_simples_avalia_gene_em_amostra
 
 
 --
--- Name: mutacao_simples_avalia_gene_em_amostra_id_exp_mut_somatica_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.mutacao_simples_avalia_gene_em_amostra
@@ -3360,7 +3000,6 @@ ALTER TABLE ONLY public.mutacao_simples_avalia_gene_em_amostra
 
 
 --
--- Name: mutacao_simples_avalia_gene_em_amostra_id_gene_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 -- ALTER TABLE ONLY public.mutacao_simples_avalia_gene_em_amostra
@@ -3368,7 +3007,6 @@ ALTER TABLE ONLY public.mutacao_simples_avalia_gene_em_amostra
 
 
 --
--- Name: mutacao_var_copias_afeta_gene_em_amost_id_exp_mut_somatica_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.mutacao_var_copias_afeta_gene_em_amostra
@@ -3376,7 +3014,6 @@ ALTER TABLE ONLY public.mutacao_var_copias_afeta_gene_em_amostra
 
 
 --
--- Name: mutacao_var_copias_afeta_gene_em_amostra_id_gene_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.mutacao_var_copias_afeta_gene_em_amostra
@@ -3384,7 +3021,6 @@ ALTER TABLE ONLY public.mutacao_var_copias_afeta_gene_em_amostra
 
 
 --
--- Name: sequenciamento_avalia_gene_em_amostra_id_amostra_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.sequenciamento_avalia_gene_em_amostra
@@ -3392,7 +3028,6 @@ ALTER TABLE ONLY public.sequenciamento_avalia_gene_em_amostra
 
 
 --
--- Name: sequenciamento_avalia_gene_em_amostra_id_exp_genica_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.sequenciamento_avalia_gene_em_amostra
@@ -3400,7 +3035,6 @@ ALTER TABLE ONLY public.sequenciamento_avalia_gene_em_amostra
 
 
 --
--- Name: sequenciamento_avalia_gene_em_amostra_id_gene_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 -- ALTER TABLE ONLY public.sequenciamento_avalia_gene_em_amostra
@@ -3408,7 +3042,6 @@ ALTER TABLE ONLY public.sequenciamento_avalia_gene_em_amostra
 
 
 --
--- Name: sequenciamento_avalia_transcrito_em_amostra_id_exp_genica_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.sequenciamento_avalia_transcrito_em_amostra
@@ -3416,7 +3049,6 @@ ALTER TABLE ONLY public.sequenciamento_avalia_transcrito_em_amostra
 
 
 --
--- Name: sequenciamento_avalia_transcrito_em_amostra_id_transcrito_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.sequenciamento_avalia_transcrito_em_amostra
@@ -3424,7 +3056,6 @@ ALTER TABLE ONLY public.sequenciamento_avalia_transcrito_em_amostra
 
 
 --
--- Name: transcrito_id_gene_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.transcrito
@@ -3432,7 +3063,6 @@ ALTER TABLE ONLY public.transcrito
 
 
 --
--- Name: transcrito_nomeia_coordenada_id_coordenada_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.transcrito_nomeia_coordenada
@@ -3440,7 +3070,6 @@ ALTER TABLE ONLY public.transcrito_nomeia_coordenada
 
 
 --
--- Name: transcrito_nomeia_coordenada_id_transcrito_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.transcrito_nomeia_coordenada
@@ -3448,7 +3077,6 @@ ALTER TABLE ONLY public.transcrito_nomeia_coordenada
 
 
 --
--- Name: tratamento_id_paciente_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pato
 --
 
 ALTER TABLE ONLY public.tratamento
