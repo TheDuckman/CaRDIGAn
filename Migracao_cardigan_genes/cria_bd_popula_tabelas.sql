@@ -22,12 +22,12 @@ CREATE DATABASE cdg;
 -- Populando as tabelas DE EXPERIMENTOS DE MUTAÇÃO TOTAL
 \copy experimento_de_mutacao_somatica FROM Migracao_cardigan_genes/arquivos_de_dump_total/popula_experimento_de_mutacao_somatica_total.tsv
 -- Populando as tabelas DE EXPERIMENTOS DE MUTAÇÃO (APENAS PARCIAL - MTO GRANDES)
-\copy mutacao_simples_avalia_gene_em_amostra FROM Migracao_cardigan_genes/arquivos_de_dump_parcial/popula_mutacao_simples_avalia_gene_em_amostra_200_coords.tsv
+-- \copy mutacao_simples_avalia_gene_em_amostra FROM Migracao_cardigan_genes/arquivos_de_dump_parcial/popula_mutacao_simples_avalia_gene_em_amostra_200_coords.tsv
 
 -- Populando a tabela EXPERIMENTOS DE EXPRESSÃO TOTAL
 \copy experimento_de_expressao_genica FROM Migracao_cardigan_genes/arquivos_de_dump_total/popula_experimento_de_expressao_genica_total.tsv
 -- Populando as tabelas DE EXPERIMENTOS DE EXPRESSÃO (APENAS PARCIAL - MTO GRANDES)
-\copy sequenciamento_avalia_gene_em_amostra FROM Migracao_cardigan_genes/arquivos_de_dump_parcial/popula_sequenciamento_avalia_gene_em_amostra_50genes.tsv
+-- \copy sequenciamento_avalia_gene_em_amostra FROM Migracao_cardigan_genes/arquivos_de_dump_parcial/popula_sequenciamento_avalia_gene_em_amostra_50genes.tsv
 
 -- Populando as tabelas com dados experimentais
 -- MUTACAO SIMPLES AVALIA GENE EM AMOSTRA
@@ -35,7 +35,10 @@ CREATE DATABASE cdg;
 -- SEQUENCIAMENTO AVALIA GENE EM AMOSTRA
 \i Migracao_cardigan_genes/arquivos_de_dump_total/dump_sequenciamento_avalia_gene_em_amostra.sql
 
+\c auxiliar
+\c cdg;
+
 -- SCRIPT PARA ALTERAÇÃO DE ESTRUTURA DAS TABELAS DE EXPERIMENTO - ADAPTAÇÃO AO NOVO SISTEMA DE GENE REFERENCIA
-\i Migracao_cardigan_genes/atualizacao_gene_id_tabelas_de_experimento.sql
+-- \i Migracao_cardigan_genes/atualizacao_gene_id_tabelas_de_experimento.sql
 
 DROP DATABASE auxiliar;
